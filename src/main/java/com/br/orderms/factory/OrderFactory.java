@@ -3,10 +3,12 @@ package com.br.orderms.factory;
 import com.br.orderms.dto.OrderCreatedEvent;
 import com.br.orderms.entity.OrderEntity;
 import com.br.orderms.entity.OrderItem;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Component
 public class OrderFactory implements OrderFactoryInterface {
 
     @Override
