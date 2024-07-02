@@ -5,7 +5,10 @@ import com.br.orderms.dto.api.OrderResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.math.BigDecimal;
+
 public interface OrderServiceInterface {
-    public Page<OrderResponse> findAllByCustomerId(Long customerId, PageRequest pageRequest);
-    public void save(OrderCreatedEvent event);
+    BigDecimal findTotalOnOrdersByCustomerId(Long customerId);
+    Page<OrderResponse> findAllByCustomerId(Long customerId, PageRequest pageRequest);
+    void save(OrderCreatedEvent event);
 }
